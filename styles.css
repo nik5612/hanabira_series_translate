@@ -154,13 +154,6 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Games Grid */
-.games-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-}
-
 /* Game Card */
 .game-card {
     background: var(--card-bg);
@@ -462,24 +455,29 @@ footer a {
     opacity: 1;
 }
 
-/* Адаптивность: меньше карточек на узких экранах */
-@media (max-width: 1600px) {
-    .games-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 в ряд на ноутбуках */
-    }
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* По умолчанию 5 */
+    gap: 1.2rem;
 }
-@media (max-width: 1200px) {
-    .games-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 в ряд на планшетах */
-    }
+
+/* 4 колонки на широких ноутбуках */
+@media (max-width: 1400px) {
+    .games-grid { grid-template-columns: repeat(4, 1fr); }
 }
-@media (max-width: 900px) {
-    .games-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 в ряд на больших телефонах */
-    }
+
+/* 3 колонки на стандартных ноутбуках/планшетах */
+@media (max-width: 1100px) {
+    .games-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 600px) {
-    .games-grid {
-        grid-template-columns: 1fr; /* 1 в ряд на мобильных */
-    }
+
+/* 2 колонки на телефонах в альбоме */
+@media (max-width: 750px) {
+    .games-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 1 колонка на мобильных */
+@media (max-width: 480px) {
+    .games-grid { grid-template-columns: 1fr; }
+    .game-cover { height: 400px; } /* Уменьшаем обложку на телефонах */
 }
