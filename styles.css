@@ -157,8 +157,8 @@ nav a:hover {
 /* Games Grid */
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
 }
 
 /* Game Card */
@@ -462,19 +462,24 @@ footer a {
     opacity: 1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 { font-size: 2rem; }
-    .section-title { font-size: 1.8rem; }
-    .games-grid { grid-template-columns: 1fr; }
-    .features { grid-template-columns: 1fr; }
-    .author-card { flex-direction: column; align-items: center; text-align: center; }
-    .author-reasons li {
-        border-left: none;
-        border-top: 2px solid var(--border);
-        padding-top: 0.8rem;
-        text-align: left;
+/* Адаптивность: меньше карточек на узких экранах */
+@media (max-width: 1600px) {
+    .games-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 в ряд на ноутбуках */
     }
-    .contact-item { padding: 0.8rem 1rem; }
-    .contact-icon { width: 45px; height: 45px; font-size: 1.5rem; }
+}
+@media (max-width: 1200px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 в ряд на планшетах */
+    }
+}
+@media (max-width: 900px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 в ряд на больших телефонах */
+    }
+}
+@media (max-width: 600px) {
+    .games-grid {
+        grid-template-columns: 1fr; /* 1 в ряд на мобильных */
+    }
 }
