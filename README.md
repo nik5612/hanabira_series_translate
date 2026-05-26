@@ -1,1 +1,0 @@
-# -hanabira_Series_translate
