@@ -457,23 +457,23 @@ footer a {
 
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* По умолчанию 5 */
+    grid-template-columns: repeat(4, 1fr); /* По умолчанию 5 */
     gap: 1.2rem;
 }
 
 /* 4 колонки на широких ноутбуках */
 @media (max-width: 1400px) {
-    .games-grid { grid-template-columns: repeat(4, 1fr); }
+    .games-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* 3 колонки на стандартных ноутбуках/планшетах */
 @media (max-width: 1100px) {
-    .games-grid { grid-template-columns: repeat(3, 1fr); }
+    .games-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* 2 колонки на телефонах в альбоме */
 @media (max-width: 750px) {
-    .games-grid { grid-template-columns: repeat(2, 1fr); }
+    .games-grid { grid-template-columns: repeat(1, 1fr); }
 }
 
 /* 1 колонка на мобильных */
