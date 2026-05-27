@@ -171,7 +171,7 @@ nav a:hover {
 /* Game Cover */
 .game-cover {
     width: 100%;
-    height: 300px;
+    height: 500px;
     background: linear-gradient(135deg, #ffeef2 0%, #ffe0e6 100%);
     display: flex;
     align-items: center;
