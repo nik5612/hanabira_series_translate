@@ -494,8 +494,8 @@ footer a {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
@@ -503,11 +503,12 @@ footer a {
     border: 2px solid transparent;
     min-width: 140px;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .store-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .store-btn:active {
@@ -523,6 +524,7 @@ footer a {
 .btn-gog:hover {
     background: linear-gradient(135deg, #5a3f82 0%, #7c3aed 100%);
     border-color: #a78bfa;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
 }
 
 /* Чёрная кнопка — Steam */
@@ -534,16 +536,13 @@ footer a {
 .btn-steam:hover {
     background: linear-gradient(135deg, #0f1115 0%, #1e232b 100%);
     border-color: #66c0f4;
+    box-shadow: 0 6px 20px rgba(102, 192, 244, 0.3);
 }
 
 /* Иконки в кнопках */
 .btn-icon {
     font-size: 1.1rem;
     line-height: 1;
-}
-
-.btn-text {
-    white-space: nowrap;
 }
 
 /* Адаптив для мобильных */
@@ -556,10 +555,4 @@ footer a {
         width: 100%;
         justify-content: center;
     }
-}
-
-/* Опционально: скрыть кнопки, если перевода нет (логика через JS или вручную) */
-.game-card .translation-status.status-none + .store-buttons,
-.game-card .store-buttons:has(+ .translation-status.status-none) {
-    /* можно добавить display: none, если нужно скрывать кнопки для непереведённых игр */
 }
